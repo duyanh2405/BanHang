@@ -25,7 +25,7 @@ namespace Api.BanHang.Controllers
                 return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
             return Ok(new { taikhoan = user.TenTaiKhoan, token = user.token });
         }
-
+         
         [Route("create-TaiKhoan")]
         [HttpPost]
         public TaiKhoanModel CreateItem([FromBody] TaiKhoanModel model)
